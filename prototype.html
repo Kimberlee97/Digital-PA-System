@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital PA System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Quick inline Apple-inspired styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #f2f2f7;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #111;
+            margin: 0.5rem 0;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        .dashboard, .email-summary {
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9rem;
+            color: #555;
+            margin: 0.5rem 0 0.25rem;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus, button:focus {
+            border-color: #007aff;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0, 122, 255, 0.3);
+        }
+
+        button {
+            background: #007aff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background: #005fcb;
+        }
+
+        .output {
+            background-color: #f2f2f7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border: 1px solid #e0e0e0;
+            color: #555;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Digital Personal Assistant</h1>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="card">
+                <h3>Schedule a Meeting</h3>
+                <form id="schedule-form">
+                    <label for="meeting-title">Meeting Title</label>
+                    <input type="text" id="meeting-title" placeholder="Enter meeting title" required>
+
+                    <label for="meeting-date">Date & Time</label>
+                    <input type="datetime-local" id="meeting-date" required>
+
+                    <label for="meeting-participants">Participants</label>
+                    <input type="text" id="meeting-participants" placeholder="Enter participant emails, comma-separated" required>
+
+                    <button type="submit">Schedule Meeting</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Send Follow-up Task</h3>
+                <form id="followup-form">
+                    <label for="followup-task">Task Description</label>
+                    <textarea id="followup-task" placeholder="Enter task description" required></textarea>
+
+                    <label for="followup-recipient">Recipient</label>
+                    <input type="email" id="followup-recipient" placeholder="Enter recipient email" required>
+
+                    <label for="followup-date">Due Date</label>
+                    <input type="date" id="followup-date" required>
+
+                    <button type="submit">Send Follow-up</button>
+                </form>
+            </div>
+        </section>
+
+<section class="email-summary">
+            <h2>Email Summarization</h2>
+            <div class="card">
+                <h3>Generate Summary</h3>
+                <form id="summary-form">
+                    <label for="email-content">Email Thread Content</label>
+                    <textarea id="email-content" placeholder="Paste email thread content here" required></textarea>
+
+                    <button type="submit">Generate Summary</button>
+                </form>
+                <div id="summary-output" class="output"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Digital PA System © 2025</p>
+    </footer>
+</body>
+</html>
