@@ -1,4 +1,4 @@
-# Digital-PA-System
+# Digital-PA-System (Name: InSee)
 A web-based Public Address (PA) system for administrators to effectively arrange and schedule meetings and automate tasks such as sending follow-up tasks to themselves or others, sending reminders, generating summaries of email threads, an arranging meetings.
 
 ## Intended Features
